@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         Random rand = new Random();
         Scanner scanner = new Scanner(System.in);
-        int numberToGuess = rand.nextInt(99);
+        int numberToGuess = rand.nextInt(101);
         int guessedNumber;
         String name;
 
@@ -28,6 +28,7 @@ public class Main {
                 userAnswer = scanner.next().toLowerCase().charAt(0);
 
                 if (userAnswer == 'n') break;
+                numberToGuess = rand.nextInt(101);
                 System.out.println("Let the game begin!");
             }
         }
